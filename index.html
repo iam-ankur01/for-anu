@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Love You 💘</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #ffe6f0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    h1 {
+      color: #ff3366;
+      font-size: 3rem;
+    }
+
+    button {
+      font-size: 1.5rem;
+      padding: 10px 30px;
+      margin: 15px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .yes {
+      background-color: #ff6699;
+      color: white;
+    }
+
+    .no {
+      background-color: #cccccc;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="message">F*** You 😘</h1>
+
+  <div>
+    <button class="yes" onclick="changeMessage()">Say it again</button>
+    <button class="no" onclick="fakeClick(event)">No</button>
+  </div>
+
+  <script>
+    function changeMessage() {
+      const messages = [
+        "F*** You 😘",
+        "Still F*** You 😆",
+        "No escape from it 😏",
+        "You love this 😂",
+        "Try saying No again 😈"
+      ];
+      const msg = messages[Math.floor(Math.random() * messages.length)];
+      document.getElementById("message").textContent = msg;
+    }
+
+    function fakeClick(e) {
+      e.preventDefault();
+      alert("No button doesn't work! 😜");
+    }
+  </script>
+
+</body>
+</html>
